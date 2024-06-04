@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --testURL=https://api.rajaongkir.com",
+    "test": "react-scripts test --testURL=https://api.rajaongkir.com --watchAll=false",
     "eject": "react-scripts eject",
     "open:coverage": "open ./coverage/lcov-report/index.html"
   },
