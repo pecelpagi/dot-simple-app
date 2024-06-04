@@ -22,6 +22,7 @@ const InputNumber = ({ value, title, onChange }: InputNumberProps) => {
           outline: 'none',
           fontSize: 18,
           padding: 10,
+          width: 'auto',
         }
       }}
     >

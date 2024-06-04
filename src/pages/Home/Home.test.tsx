@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Home from '../../pages/Home';
+import Home from './index';
 import { removeApiKey, setApiKey } from '../../utils';
 
 jest.mock('react-router-dom', () => {

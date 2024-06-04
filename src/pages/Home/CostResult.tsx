@@ -25,9 +25,12 @@ const CostResut = () => {
             <Box
                 css={{
                     display: 'grid',
-                    gridTemplateColumns: '1fr 1fr',
+                    gridTemplateColumns: '1fr',
                     gap: 10,
-                    padding: 10
+                    padding: 10,
+                    '@sm': {
+                        gridTemplateColumns: '1fr 1fr',
+                    }
                 }}
             >
                 {shippingCost.costs.map((x) => (

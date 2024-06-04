@@ -1,4 +1,4 @@
-import * as api from '../../data';
+import * as api from './index';
 
 const API_KEY = '323fb606f44b43b4febb6470be051f2c';
 

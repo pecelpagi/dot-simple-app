@@ -6,11 +6,12 @@ import Box from '../../components/Box';
 import { styled } from '../../stitches.config';
 
 const StyledForm = styled('form', {
+    padding: 20,
     display: 'flex',
     gap: 15,
     flexDirection: 'column',
     input: {
-        width: 400,
+        width: '100%',
     },
     '.error': {
         color: '#F00'

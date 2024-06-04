@@ -14,6 +14,7 @@ const Content = () => {
     return (
         <Box
             css={{
+                padding: 20,
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 15,
@@ -24,15 +25,18 @@ const Content = () => {
                     display: 'flex',
                     flexDirection: 'column',
                     gap: 15,
-                }
+                },
             }}
         >
             <form onSubmit={onFetchCost}>
                 <Box
                     css={{
                         display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                        gridTemplateColumns: '1fr',
                         gap: 15,
+                        '@lg': {
+                            gridTemplateColumns: '1fr 1fr',
+                        }
                     }}
                 >
                     <SelectOriginData />
@@ -41,8 +45,11 @@ const Content = () => {
                 <Box
                     css={{
                         display: 'grid',
-                        gridTemplateColumns: '1fr 1fr',
+                        gridTemplateColumns: '1fr',
                         gap: 15,
+                        '@sm': {
+                            gridTemplateColumns: '1fr 1fr',
+                        }
                     }}
                 >
                     <InputNumber value={weight} title="Berat (gr)" onChange={(e) => { onSetData('weight', e.target.value); }} />

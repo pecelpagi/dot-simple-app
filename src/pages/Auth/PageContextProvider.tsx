@@ -11,6 +11,7 @@ interface IPageContextProviderProps {
 
 interface IClassComponentProps extends IPageContextProviderProps {
     onSetLoading: (loading: boolean) => void,
+    onFetchProvince: () => void,
 }
 
 interface IPageContextProviderState {
@@ -32,12 +33,14 @@ class ClassComponent extends Component<IClassComponentProps, IPageContextProvide
     handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
-        const { navigate, onSetLoading } = this.props;
+        const { navigate, onSetLoading, onFetchProvince } = this.props;
         const { apiKey } = this.state;
 
         onSetLoading(true);
 
         await apiServiceUtility.handleCheckApiKeyIsValid({ key: apiKey, navigate, setState: this.setState });
+
+        onFetchProvince();
 
         onSetLoading(false);
     }
@@ -62,11 +65,11 @@ class ClassComponent extends Component<IClassComponentProps, IPageContextProvide
 }
 
 const PageContextProvider = ({ children }: IPageContextProviderProps) => {
-    const { onSetLoading } = useContext(AppContext);
+    const { onSetLoading, onFetchProvince } = useContext(AppContext);
     const navigate = useNavigate();
 
     return (
-        <ClassComponent {...{ navigate, onSetLoading }}>
+        <ClassComponent {...{ navigate, onSetLoading, onFetchProvince }}>
             {children}
         </ClassComponent>
     )

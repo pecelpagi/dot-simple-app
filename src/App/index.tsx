@@ -10,15 +10,26 @@ function App() {
         <AppContextProvider>
             <Box
                 css={{
-                    padding: 30,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    height: window.innerHeight
+                    height: window.innerHeight,
+                    overflowY: 'auto',
                 }}
             >
-                <Box>
+                <Box
+                    css={{
+                        height: 'max-content',
+                        width: '100%',
+                        '@md': {
+                            width: 700,
+                        },
+                        '@lg': {
+                            width: 800,
+                        }
+                    }}
+                >
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path='auth' element={<Auth />} />

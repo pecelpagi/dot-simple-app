@@ -23,7 +23,7 @@ const Select = ({ data, value, title, onChange }: SelectProps) => {
                     outline: 'none',
                     fontSize: 18,
                     padding: 10,
-                    width: 325.5
+                    width: 'auto'
                 }
             }}
         >

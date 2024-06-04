@@ -22,6 +22,7 @@ const InputText = ({ value, title, onChange }: InputTextProps) => {
           outline: 'none',
           fontSize: 18,
           padding: 10,
+          width: 'auto',
         }
       }}
     >
